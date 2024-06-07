@@ -4,8 +4,8 @@
   "description": "Proyecto de reto Kodemia de creación de API",
   "main": "index.js",
   "scripts": {
-    "start": "npm index.js",
-    "dev": "npm --watch index.js"
+    "start": "node index.js",
+    "dev": "node --watch index.js"
   },
   "author": "",
   "license": "ISC",
