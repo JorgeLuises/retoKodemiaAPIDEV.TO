@@ -9,7 +9,7 @@ db.connect()
     .then(() => {
         console.log('DB connected successfully');
 
-        server.listen(() => {
+        server.listen(PORT, () => {
             console.log('Server running on port: ', PORT);
         });
     })
