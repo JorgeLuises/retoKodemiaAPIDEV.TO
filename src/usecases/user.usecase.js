@@ -16,9 +16,6 @@ async function createUser (userData) {
 
 async function getUserById (id) {
     const user = await Users.findById(id);
-
-    if (!user) throw createError(404, 'Nonexitent user');//Posible error
-
     return user;
 };
 

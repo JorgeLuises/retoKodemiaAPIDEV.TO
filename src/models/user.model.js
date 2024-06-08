@@ -28,8 +28,8 @@ const schema = new mongoose.Schema ({
         type: Date,
         default: Date.now
     },
-    postedAt: {
-        type: String,
+    updatedAt: {
+        type: Date,
         default: Date.now
     }
 });

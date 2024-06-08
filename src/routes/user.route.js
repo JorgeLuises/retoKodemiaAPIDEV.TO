@@ -28,7 +28,7 @@ router.get('/:id', async (request, response) => {
 
         response.json({
             success: true,
-            data: {user: userFound}
+            data: {userFound}
         });
     } catch (error) {
         response.status(error.status || 500);
