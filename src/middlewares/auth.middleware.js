@@ -2,6 +2,7 @@
 const createError = require('http-errors');
 const jwt = require('../lib/jwt');
 const userUsecase = require('../usecases/user.usecase');
+const postUsecase = require('../usecases/post.usecase');
 
 async function auth (request, response, next) {
     try {
