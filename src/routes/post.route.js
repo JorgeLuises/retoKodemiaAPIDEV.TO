@@ -112,5 +112,22 @@ route.get('/', async (request, response) => {
     }
 });
 
+route.get('/', async (request,response) => {
+    try {
+        const posts = await postUsecase.getPosts();
+
+        response.json({
+            success: true,
+            data: {posts}
+        });
+    } catch (error) {
+        response.status(error.status || 500);
+        response.json({
+            success: false,
+            error: error.message
+        });
+    }
+});
+
 
 module.exports = route;

@@ -36,10 +36,16 @@ async function getPostById (id) {
     return postById;
 };
 
+async function getPosts () {
+    const allPosts = await Posts.find().populate("user");
+    return allPosts;
+}
+
 module.exports = {
     createPost,
     editPost,
     deletePost,
     getFilterPosts,
-    getPostById
+    getPostById,
+    getPosts
 };
