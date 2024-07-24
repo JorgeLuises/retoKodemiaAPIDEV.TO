@@ -36,10 +36,10 @@ async function getPostById (id) {
     return postById;
 };
 
-async function getPosts () {
-    const allPosts = await Posts.find().populate("user");
+async function getAll () {
+    const allPosts = await Posts.find().populate("user");//Union de dos documentos json relacionados
     return allPosts;
-}
+};
 
 module.exports = {
     createPost,
@@ -47,5 +47,5 @@ module.exports = {
     deletePost,
     getFilterPosts,
     getPostById,
-    getPosts
+    getAll
 };

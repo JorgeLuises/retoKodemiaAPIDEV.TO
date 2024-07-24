@@ -112,17 +112,17 @@ route.get('/', async (request, response) => {
     }
 });
 
-route.get('/', async (request,response) => {
+route.get('/', async (request, response) => {
     try {
-        const posts = await postUsecase.getPosts();
-
-        response.json({
+        const allPosts = await postUsecase.getAll();
+        
+        response.json ({
             success: true,
-            data: {posts}
+            data: { allPosts}
         });
-    } catch (error) {
+    } catch(error) {
         response.status(error.status || 500);
-        response.json({
+        response.json( {
             success: false,
             error: error.message
         });
