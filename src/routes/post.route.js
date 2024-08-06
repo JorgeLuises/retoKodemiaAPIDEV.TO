@@ -94,7 +94,7 @@ route.get('/:id', auth , async (request, response) => {
     }
 });
 
-route.get('/', async (request, response) => {
+/*route.get('/', async (request, response) => {
     try {
         const search = request.query.search
         const filteredPosts = await postUsecase.getFilterPosts(search);
@@ -110,7 +110,7 @@ route.get('/', async (request, response) => {
             error: error.message
         });
     }
-});
+});*/
 
 route.get('/', async (request, response) => {
     try {
